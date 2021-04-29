@@ -6,14 +6,16 @@ class DesignPad extends React.Component {
         super(props);
 
         this.state = {
-            color: 'white'
+            backgroundImage: `url('https://images.theconversation.com/files/46930/original/8x6wnb39-1398261971.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop')`
+            // color: 'white'
         }
     }
 
     onDrop = (event) => {
-        console.log("Dropped something right here")
+        console.log("Dropped something right here", this.props.currentInput.src)
         this.setState({
-            color: this.props.currentInput.color
+            // color: this.props.currentInput.color
+            backgroundImage: this.props.currentInput.src
         })
     }
 
@@ -24,7 +26,7 @@ class DesignPad extends React.Component {
     render(){
         return(
             <div className = "designPad" style = {
-                {background: this.state.color}} onDragOver = {this.onDragOver} onDrop = {() => this.onDrop()}>
+                {backgroundImage: this.state.backgroundImage}} onDragOver = {this.onDragOver} onDrop = {() => this.onDrop()}>
             </div>
         )
     }

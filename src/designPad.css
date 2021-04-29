@@ -73,12 +73,10 @@ font-family: 'Avenir Next', sans-serif;
 justify-content: space-around;
 }
 
-.designPad {
-
-}
-
 .padButton1 {
-  background-color: rgb(250, 4, 4);
+  /* background-color: rgb(250, 4, 4); */
+  background-image:('C://Users//aaron//WebDev//HW3//design-pad//src//components//kakashi.gif');
+  /* background-color: url('https://media.giphy.com/media/12754FUAz1Ks5q/giphy.gif'); */
 }
 .padButton2 {
   background-color: rgb(248, 113, 2);
